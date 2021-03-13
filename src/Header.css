@@ -1,0 +1,187 @@
+h5{
+    color: whitesmoke;
+}
+.header{
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    background-color: #212121;
+    /* background-color: #333436; */
+    width: 100%;
+    top: 0;
+    align-items: center;
+    height: fit-content;
+}
+.header_left{
+    flex: 0.3;
+    position: relative;
+    left: 12%;
+    cursor: pointer;
+}
+.header_left img{
+    object-fit: contain;
+    width: 20%;
+
+}
+.header_right{
+    display: flex;
+    flex: 0.7;
+    flex-direction: column;
+    justify-content:center;
+    width: 100%;
+}
+.header_top{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    color: whitesmoke;
+    height: 50px;
+}
+.header_topleft{
+    flex: 0.4;
+    position: relative;
+    bottom: 12%;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.header_topright{
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* bottom: 5%; */
+    cursor: pointer;
+    flex: 0.6;
+}
+.signup{
+    margin-left: 20px;
+}
+.hoverdata{
+    position: absolute;
+    top: 120%;
+    right: 20%;
+    transform: scaleY(0);
+    transition: all 0.5s;
+    z-index: 2;
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding-left:30px;
+    padding-right: 30px;
+}
+.hoverdata > div:hover{
+    opacity: 0.6;
+}
+.hoverdata::before{
+    content: "";
+      position: absolute;
+      right: 30%;
+      top: -20px;
+      width: 0;
+      transform: rotate(90deg);
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 25px solid whitesmoke;
+      border-bottom: 13px solid transparent;
+}
+.hoverdata > button{
+    color: white;
+    text-transform:capitalize;
+    font-size: 12px;
+    background-color: red;
+    transition: all 0.4s;
+    margin-top: 15px;
+    border-radius: 999px;
+}
+.hoverdata > button:hover{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+.hoverdata > .MuiSvgIcon-root{
+    color: black;
+}
+.hoverdata >div{
+    display: flex;
+    align-items: center;
+}
+.hoverdata > div > h5{
+    margin-left: 5px;
+    color: black;
+    font-weight: normal;
+}
+.header_topright > .signup:hover .hoverdata{
+    transform: scaleY(1);
+    transform-origin: top;
+}
+.header_topright > h5{
+    margin-left: 20px;
+}
+.header_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_bottomleft{
+    display: flex;
+    cursor: pointer;
+    flex: 0.4;
+}
+.header_bottomleft > div{
+    display: flex;
+    align-items: center;
+}
+.header_bottomleft > div:nth-child(1){
+    margin-left: 20px;
+}
+.header_bottomleft > div:nth-child(2){
+    margin-left: 60px;
+}
+.header_bottomright{
+    flex: 0.6;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    right: 10%;
+    align-items: center;
+}
+.header_bottomright > .MuiSvgIcon-root{
+    margin-left: 20px;
+}
+.MuiSvgIcon-root{
+    color: black;
+}
+.header_input{
+    display: flex;
+    border-bottom: 1px solid white;
+    align-items: center;
+}
+.header_input > input{
+    border: none;
+    padding: 5px;
+    color: white;
+    position: relative;
+    background-color: #212121;
+    /* opacity: 0.5; */
+}
+.header_input > input:focus{
+    outline: 0;
+}
+.header_input :focus{
+    /* padding: 24px; */
+    background-color: white;
+    border:none;
+    transform: scale(2.42);
+    color: black;
+    right: 80px;
+    border-radius: 0;
+    transition: all 0.5s ease;
+}
+.header_input :focus::placeholder{
+    transform: scale(0);
+}
+::placeholder{
+    opacity: 0.5;
+    color: white;
+}
